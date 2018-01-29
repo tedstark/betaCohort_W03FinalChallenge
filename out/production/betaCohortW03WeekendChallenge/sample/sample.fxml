@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER"
+          hgap="10"
+          vgap="10"
+          xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/8.0.121"
+          fx:controller="sample.Controller">
+
+    <!--1st Row, Greeting & Questions-->
+    <HBox spacing="5"
+          GridPane.rowIndex="0">
+        <VBox minWidth="60"
+              spacing="5"
+              GridPane.columnIndex="0">
+              <Text fx:id="hello"
+                    text="Hello!" />
+        </VBox>
+        <VBox spacing="5"
+              GridPane.columnIndex="1">
+        <Text fx:id="question"
+              text="What's your name?" />
+        </VBox>
+    </HBox>
+
+    <!--2nd Row, Entry field and Confirm button-->
+    <HBox spacing="5"
+          GridPane.rowIndex="1">
+        <VBox minWidth="60"
+              spacing="5">
+        </VBox>
+        <VBox spacing="5">
+              <TextField fx:id="userInput" />
+        </VBox>
+        <VBox spacing="5">
+            <Button fx:id="btnConfirm"
+                    text="Confirm"
+                    onAction="#clickGreeting"/>
+        </VBox>
+    </HBox>
+
+    <!--3rd Row, User Feedback-->
+    <HBox spacing="5"
+          GridPane.rowIndex="8">
+        <VBox minWidth="60"
+              spacing="5">
+        </VBox>
+        <VBox spacing="5"
+              GridPane.columnIndex="1">
+        <Text fx:id="feedbackName"
+              text="" />
+        <Text fx:id="feedbackYear"
+              text="" />
+        <Text fx:id="feedbackAge"
+              text="" />
+        <Text fx:id="feedback5yrs"
+              text="" />
+        <Text fx:id="feedback10yrs"
+              text="" />
+        </VBox>
+    </HBox>
+
+    <!--Last Row, Stage name-->
+    <HBox spacing="5"
+          GridPane.rowIndex="15">
+        <VBox minWidth="60"
+              spacing="5"
+              GridPane.columnIndex="0">
+              <Text fx:id="stageStatus"
+                    text="name"
+                    visible="false"/>
+        </VBox>
+        <VBox spacing="5"
+              GridPane.columnIndex="1">
+            <Button fx:id="restart"
+                    text="Restart App"
+                    visible="false"
+                    onAction="#restart"/>
+        </VBox>
+        <VBox spacing="5"
+              GridPane.columnIndex="2">
+            <Button fx:id="endApp"
+                    text="End App"
+                    visible="true"
+                    onAction="#endApp"/>
+        </VBox>
+    </HBox>
+
+</GridPane>
