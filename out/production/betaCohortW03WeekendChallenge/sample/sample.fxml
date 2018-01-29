@@ -50,28 +50,24 @@
 
     <!--3rd Row, User Feedback-->
     <HBox spacing="5"
-          GridPane.rowIndex="8">
+          GridPane.rowIndex="4">
         <VBox minWidth="60"
               spacing="5">
         </VBox>
         <VBox spacing="5"
               GridPane.columnIndex="1">
-        <Text fx:id="feedbackName"
+        <Text fx:id="feedback1"
               text="" />
-        <Text fx:id="feedbackYear"
+        <Text fx:id="feedback2"
               text="" />
-        <Text fx:id="feedbackAge"
-              text="" />
-        <Text fx:id="feedback5yrs"
-              text="" />
-        <Text fx:id="feedback10yrs"
+        <Text fx:id="feedback3"
               text="" />
         </VBox>
     </HBox>
 
     <!--Last Row, Stage name-->
     <HBox spacing="5"
-          GridPane.rowIndex="15">
+          GridPane.rowIndex="8">
         <VBox minWidth="60"
               spacing="5"
               GridPane.columnIndex="0">

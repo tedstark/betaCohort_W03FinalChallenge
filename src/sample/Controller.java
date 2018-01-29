@@ -20,15 +20,15 @@ public class Controller {
     @FXML
     private Text hello;
     @FXML
-    private Text feedbackName;
+    private Text feedback1;
     @FXML
-    private Text feedbackYear;
+    private Text feedback2;
     @FXML
-    private Text feedbackAge;
+    private Text feedback3;
     @FXML
-    private Text feedback5yrs;
+    private Text feedback4;
     @FXML
-    private Text feedback10yrs;
+    private Text feedback5;
     @FXML
     private Button btnConfirm;
     @FXML
@@ -48,17 +48,17 @@ public class Controller {
         if (stageStatus.getText().equalsIgnoreCase("name")) {
             stringName = userInput.getText();
             userInput.clear();
-            feedbackName.setText("Hello " + stringName + "! Nice to meet you!");
+            feedback1.setText("Hello " + stringName + "! Nice to meet you!");
+            question.setText("What's the current year?");
             hello.setVisible(false);
             stageStatus.setText("year");
-            question.setText("What's the current year?");
         } else if (stageStatus.getText().equalsIgnoreCase("year")) {
             stringYear = userInput.getText();
             userInput.clear();
-            feedbackName.setText("Thanks " + stringName + ",");
-            feedbackYear.setText("The current year is " + stringYear);
-            stageStatus.setText("age");
+            feedback1.setText("Thanks " + stringName + "!");
+            feedback2.setText("How's " + stringYear + " treating you so far?");
             question.setText("What's your age?");
+            stageStatus.setText("age");
         } else if (stageStatus.getText().equalsIgnoreCase("age")) {
             stringAge = userInput.getText();
             intYear = Integer.parseInt(stringYear);
@@ -68,11 +68,9 @@ public class Controller {
             intAge5 = intAge + 5;
             intAge10 = intAge + 10;
             userInput.clear();
-            feedbackName.setText(stringName + ", you are currently " + stringAge + " years old.");
-            feedbackYear.setText("");
-            feedbackAge.setText("");
-            feedback5yrs.setText("In " + intYear5 + " you will be " + intAge5 + " years old.");
-            feedback10yrs.setText("In " + intYear10 + " you will be " + intAge10 + " years old.");
+            feedback1.setText(stringName + ", you are currently " + stringAge + " years old.");
+            feedback2.setText("In " + intYear5 + " you will be " + intAge5 + " years old.");
+            feedback3.setText("In " + intYear10 + " you will be " + intAge10 + " years old.");
             stageStatus.setText("end");
             question.setText("");
             userInput.setVisible(false);
@@ -87,12 +85,10 @@ public class Controller {
         userInput.setVisible(true);
         btnConfirm.setVisible(true);
         restart.setVisible(false);
-        feedbackName.setText("");
-        feedbackYear.setText("");
-        feedbackAge.setText("");
-        feedback5yrs.setText("");
-        feedback10yrs.setText("");
-    }
+        feedback1.setText("");
+        feedback2.setText("");
+        feedback3.setText("");
+        }
     public void endApp(ActionEvent actionEvent) {
         Platform.exit();
     }
