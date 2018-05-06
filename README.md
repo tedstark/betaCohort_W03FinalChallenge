@@ -2,7 +2,7 @@
 GCU Java Programming Bootcamp, Day 16
 
 Challenge Requirements:
- /*For this application, you will be upgrading your assessment from week 1.
+    For this application, you will be upgrading your assessment from week 1.<br>
     This was the application where the user entered their name, age, and current year,
         then produced how old they would be next year, in five years, and in ten years.
     In this version of the application, you will create a JavaFX based user interface for the application.
